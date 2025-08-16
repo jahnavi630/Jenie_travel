@@ -1,0 +1,113 @@
+
+.hero-section {
+  position: relative;
+  height: 600px;
+  background-image: url('https://source.unsplash.com/1600x900/?travel,landscape');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  animation: slideIn 0.7s ease;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  animation: slideIn 0.9s ease;
+}
+
+.hero-form-container {
+  flex: 1;
+  max-width: 450px;
+  animation: fadeIn 1s ease;
+}
+
+.hero-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-form-title {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.hero-btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.875rem;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+  }
+  
+  .hero-text {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-form-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    height: auto;
+    padding: 3rem 0;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .hero-form {
+    padding: 1.5rem;
+  }
+}

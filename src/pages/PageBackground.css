@@ -1,0 +1,68 @@
+
+.page-background {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-background {
+  background-image: url('https://source.unsplash.com/1600x900/?mountain,night,travel');
+  background-color: #1c2833; /* Fallback color */
+}
+
+.bookings-background {
+  background-image: url('https://source.unsplash.com/1600x900/?airport,night,terminal');
+  background-color: #1c2833; /* Fallback color */
+}
+
+.budget-background {
+  background-image: url('https://source.unsplash.com/1600x900/?budget,dark,planning');
+  background-color: #1c2833; /* Fallback color */
+}
+
+.story-background {
+  background-image: url('https://source.unsplash.com/1600x900/?notebook,night,travel');
+  background-color: #1c2833; /* Fallback color */
+}
+
+.emergency-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/1600x900/?emergency,night,safety');
+  background-color: #2c0c0c; /* Fallback color */
+}
+
+.surprise-background {
+  background-image: url('https://source.unsplash.com/1600x900/?stars,night,travel');
+  background-color: #1c2833; /* Fallback color */
+}
+
+.jenie-background {
+  background-image: url('https://source.unsplash.com/1600x900/?tech,dark,ai');
+  background-color: #1c2833; /* Fallback color */
+}
+
+.contact-background {
+  background-image: url('https://source.unsplash.com/1600x900/?contact,night,phone');
+  background-color: #1c2833; /* Fallback color */
+}
+
+.page-overlay {
+  background-color: rgba(0, 0, 0, 0.85); /* Darkened overlay for readability */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+  padding: 2rem 1rem;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding: 1.5rem 1rem;
+  }
+}

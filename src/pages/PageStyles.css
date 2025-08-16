@@ -1,0 +1,395 @@
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+  padding: 2rem 1rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.page-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.page-section {
+  margin-bottom: 2rem;
+}
+
+.info-alert {
+  display: flex;
+  align-items: flex-start;
+  background-color: rgba(30, 41, 59, 0.95);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-out;
+  border-left: 4px solid #6366F1;
+}
+
+.alert-icon {
+  display: flex;
+  flex-shrink: 0;
+  margin-right: 1rem;
+  color: #6366F1;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.alert-message {
+  color: #aaadb0;
+  line-height: 1.6;
+}
+
+/* Date picker container */
+.travel-dates {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.date-picker-container {
+  background-color: rgba(30, 41, 59, 0.9);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.date-picker-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.date-display {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.date-calendar {
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 0.5rem;
+  border: 1px solid #3a3a3a;
+}
+
+.update-plan-btn {
+  margin-top: 1rem;
+  width: 100%;
+  background: linear-gradient(45deg, #6366F1, #8B5CF6);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border-radius: 12px;
+}
+
+.update-plan-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.5);
+}
+
+/* Travel route map */
+.travel-route-map {
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgba(30, 41, 59, 0.95);
+  animation: slideIn 0.6s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.travel-route-map h3 {
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 0;
+  color: white;
+}
+
+/* Emergency Page Styles */
+.emergency-content {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.sos-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.emergency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.emergency-box {
+  background-color: rgba(30, 41, 59, 0.95);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.5s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.emergency-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.box-header {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+  background-color: rgba(26, 32, 44, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.box-icon {
+  margin-right: 0.75rem;
+}
+
+.box-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+.contacts-box .box-icon {
+  color: #6366F1;
+}
+
+.weather-box .box-icon {
+  color: #F59E0B;
+}
+
+.safety-box .box-icon {
+  color: #10B981;
+}
+
+/* ... keep existing code (responsive styles and animations) */
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .emergency-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .travel-dates {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .page-description {
+    font-size: 1rem;
+  }
+  
+  .alert-title {
+    font-size: 1.125rem;
+  }
+  
+  .info-alert {
+    padding: 1.25rem;
+    flex-direction: column;
+  }
+  
+  .alert-icon {
+    margin-bottom: 0.75rem;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-title {
+    font-size: 1.75rem;
+  }
+  
+  .box-header {
+    padding: 1rem;
+  }
+  
+  .box-title {
+    font-size: 1rem;
+  }
+}
+
+/* Contact Page Styles */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2.5rem;
+}
+
+.contact-info {
+  background-color: rgba(30, 41, 59, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  color: var(--text-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-details {
+  margin-top: 1.5rem;
+}
+
+.contact-item {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-item strong {
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.contact-form-container {
+  background-color: rgba(30, 41, 59, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 12px;
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.success-message {
+  text-align: center;
+  padding: 2rem;
+}
+
+.success-message h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--success);
+}
+
+.success-message p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.submit-btn {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.white-background-card {
+  background-color: rgba(30, 41, 59, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Loading container */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  margin: 2rem 0;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid white;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}

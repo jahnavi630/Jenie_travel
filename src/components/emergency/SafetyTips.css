@@ -1,0 +1,86 @@
+
+.safety-tips {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.tips-title {
+  display: flex;
+  align-items: center;
+  color: #374151;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.tips-title-icon {
+  margin-right: 0.5rem;
+  color: #6366F1;
+}
+
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tip-item {
+  display: flex;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.tip-icon {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 0.75rem;
+  color: #6366F1;
+}
+
+.tip-content {
+  flex: 1;
+}
+
+.tip-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #374151;
+}
+
+.tip-description {
+  color: #4b5563;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .safety-tips {
+    padding: 1rem;
+  }
+  
+  .tip-item {
+    padding: 0.75rem;
+  }
+}

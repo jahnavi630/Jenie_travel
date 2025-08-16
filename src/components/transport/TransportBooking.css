@@ -1,0 +1,35 @@
+
+.transport-booking {
+  border-radius: 12px;
+}
+
+.transport-booking-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.transport-search-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.transport-back-btn {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

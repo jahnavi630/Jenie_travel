@@ -1,0 +1,148 @@
+
+.transport-results {
+  animation: fadeIn 0.5s ease;
+}
+
+.results-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.result-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.transport-name {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--text-primary);
+}
+
+.transport-class {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  background-color: var(--background);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.transport-schedule {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.transport-time {
+  text-align: center;
+}
+
+.time {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1.125rem;
+}
+
+.city {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.transport-duration {
+  flex: 1;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.duration-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.duration-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+
+.duration-dash {
+  flex: 1;
+  height: 2px;
+  background-color: var(--primary);
+  margin: 0 0.25rem;
+}
+
+.duration-text {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.result-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transport-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.book-btn {
+  min-width: 100px;
+}
+
+@media (max-width: 576px) {
+  .result-card {
+    padding: 1rem;
+  }
+  
+  .transport-name {
+    font-size: 1rem;
+  }
+  
+  .time {
+    font-size: 1rem;
+  }
+  
+  .transport-price {
+    font-size: 1.125rem;
+  }
+  
+  .book-btn {
+    min-width: 80px;
+    padding: 0.5rem 1rem;
+  }
+}

@@ -1,0 +1,69 @@
+
+.jenie-assistant-page {
+  background-color: #000;
+  min-height: 100vh;
+  background-image: url('https://source.unsplash.com/1600x900/?mountain,dark');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+}
+
+.jenie-overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.jenie-content {
+  flex: 1;
+  padding: 2rem 1rem;
+  color: #fff;
+}
+
+.jenie-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.jenie-description {
+  font-size: 1.125rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #eee;
+  line-height: 1.6;
+}
+
+.jenie-section {
+  margin-bottom: 2rem;
+}
+
+/* Card-specific overrides for text visibility */
+.jenie-tools-container .jenie-tool-card h3,
+.jenie-tools-container .jenie-tool-card .card-title,
+.jenie-tools-container .card-header h3,
+.jenie-tools-container .card-description {
+  color: #333 !important;
+}
+
+.jenie-tools-container p, 
+.jenie-tools-container span, 
+.jenie-tools-container div:not(.jenie-tool-card),
+.jenie-tools-container li {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .jenie-title {
+    font-size: 2rem;
+  }
+  
+  .jenie-description {
+    font-size: 1rem;
+  }
+}

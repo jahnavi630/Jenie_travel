@@ -1,0 +1,340 @@
+
+.jenie-assistant-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.jenie-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jenie-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #7E69AB, #9b87f5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.jenie-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #7E69AB, #9b87f5);
+  border-radius: 2px;
+}
+
+.jenie-subtitle {
+  font-size: 1.25rem;
+  color: #aaadb0;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+}
+
+.tools-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.tool-section {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: rgba(30, 41, 59, 0.9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tool-section.expanded {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.tool-section-header {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-section-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: width 0.5s ease;
+  z-index: 0;
+}
+
+.tool-section-header:hover::before {
+  width: 100%;
+}
+
+.tool-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: rgba(30, 41, 59, 0.9);
+  margin-right: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tool-title-container {
+  flex: 1;
+  z-index: 1;
+}
+
+.tool-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: white;
+}
+
+.tool-description {
+  font-size: 0.875rem;
+  color: #aaadb0;
+}
+
+.expand-btn {
+  background: none;
+  border: none;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaadb0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.expand-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.tool-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding: 0 1.5rem;
+  opacity: 0;
+}
+
+.tool-content.visible {
+  max-height: 1000px;
+  padding: 0 1.5rem 1.5rem;
+  opacity: 1;
+  background-color: rgba(26, 32, 44, 0.9);
+}
+
+.jenie-intelligence-wrapper {
+  border-radius: 16px;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, rgba(26, 32, 44, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-top: 4px solid #9b87f5;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.jenie-intelligence-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(155, 135, 245, 0.1) 0%, rgba(126, 105, 171, 0.05) 100%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.intelligence-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+.intelligence-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #9b87f5, #7E69AB);
+  border-radius: 16px;
+  margin-right: 1.5rem;
+  color: white;
+  box-shadow: 0 6px 16px rgba(155, 135, 245, 0.3);
+}
+
+.intelligence-title-container {
+  flex: 1;
+}
+
+.intelligence-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.intelligence-description {
+  font-size: 1rem;
+  color: #aaadb0;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Tool Results Styling */
+.tool-result {
+  background-color: rgba(26, 32, 44, 0.9);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tool-heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* Animations */
+.tool-section, .jenie-intelligence-wrapper {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SVG Icons Styling */
+.tool-icon svg {
+  color: #9b87f5;
+}
+
+.intelligence-icon {
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .jenie-title {
+    font-size: 2.5rem;
+  }
+  
+  .jenie-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .intelligence-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .jenie-title {
+    font-size: 2rem;
+  }
+  
+  .jenie-subtitle {
+    font-size: 1rem;
+  }
+  
+  .tool-section-header {
+    padding: 1.25rem;
+  }
+  
+  .tool-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .tool-title {
+    font-size: 1.125rem;
+  }
+  
+  .intelligence-icon-container {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .intelligence-title {
+    font-size: 1.375rem;
+  }
+  
+  .jenie-intelligence-wrapper {
+    padding: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .jenie-header {
+    margin-bottom: 2.5rem;
+  }
+  
+  .jenie-title {
+    font-size: 1.75rem;
+  }
+  
+  .tool-description, .intelligence-description {
+    display: none;
+  }
+  
+  .intelligence-header {
+    margin-bottom: 1.5rem;
+  }
+}

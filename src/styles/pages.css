@@ -1,0 +1,208 @@
+
+/* Page styles */
+.page-background {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.page-overlay {
+  background-color: rgba(255, 255, 255, 0.9);
+  min-height: 100vh;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.page-content {
+  position: relative;
+  padding-top: 1rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.page-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.alert-card {
+  background-color: var(--primary);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.alert-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.travel-route-map {
+  margin-bottom: 2rem;
+}
+
+.travel-route-map h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+/* Travel mode selector styles */
+.travel-mode-selector {
+  margin-bottom: 1.5rem;
+}
+
+.travel-mode-selector h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.travel-mode-options {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.travel-mode-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.travel-mode-btn:hover {
+  background-color: #e9e9e9;
+}
+
+.travel-mode-btn.active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+/* Theme backgrounds */
+.bookings-background {
+  background-image: url('https://source.unsplash.com/1600x900/?travel,booking');
+}
+
+.budget-background {
+  background-image: url('https://source.unsplash.com/1600x900/?money,finance');
+}
+
+.story-background {
+  background-image: url('https://source.unsplash.com/1600x900/?travel,diary');
+}
+
+.emergency-background {
+  background-image: url('https://source.unsplash.com/1600x900/?emergency,safety');
+}
+
+.surprise-background {
+  background-image: url('https://source.unsplash.com/1600x900/?adventure,surprise');
+}
+
+.contact-background {
+  background-image: url('https://source.unsplash.com/1600x900/?customer,service');
+}
+
+/* Jenie AI page */
+.jenie-assistant-page {
+  background-color: #000;
+  min-height: 100vh;
+  background-image: url('https://source.unsplash.com/1600x900/?mountain,dark');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.jenie-overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.jenie-content {
+  flex: 1;
+  padding: 2rem 1rem;
+  color: #fff;
+  position: relative;
+}
+
+.jenie-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.jenie-description {
+  font-size: 1.125rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #eee;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.jenie-section {
+  margin-bottom: 2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .jenie-title {
+    font-size: 2rem;
+  }
+  
+  .jenie-description {
+    font-size: 1rem;
+  }
+  
+  .travel-mode-options {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .travel-mode-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,47 @@
+
+/* Common components styling */
+
+/* Back button styling */
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(30, 41, 59, 0.9);
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: white;
+}
+
+.back-button-text {
+  display: none;
+}
+
+.back-button:hover {
+  background-color: rgba(46, 59, 82, 0.9);
+  transform: translateX(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:hover .back-button-text {
+  display: inline;
+}
+
+.back-button:active {
+  transform: translateX(-1px);
+}
+
+@media (min-width: 768px) {
+  .back-button-text {
+    display: inline;
+  }
+}
+
+/* Add other common component styles here */
