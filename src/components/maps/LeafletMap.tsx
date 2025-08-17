@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from "react";
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Popup,
-  useMap,
-} from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L, { LatLngExpression, LeafletMouseEvent } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "./LeafletMap.css";
 
-// Fix default marker icons
 import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 
@@ -43,7 +36,6 @@ interface FlyToProps {
   zoom?: number;
 }
 
-// Smooth fly-to animation when center/zoom changes
 const FlyTo: React.FC<FlyToProps> = ({ position, zoom = 13 }) => {
   const map = useMap();
   useEffect(() => {
@@ -52,17 +44,14 @@ const FlyTo: React.FC<FlyToProps> = ({ position, zoom = 13 }) => {
   return null;
 };
 
-// Custom flag markers
 const createCustomIcon = (countryCode?: string) => {
   if (!countryCode) return DefaultIcon;
-
   return L.divIcon({
     className: "custom-marker-icon",
     html: `
       <div class="flag-marker-container">
         <div class="flag-container">
-          <img src="https://flagcdn.com/w40/${countryCode.toLowerCase()}.png" 
-               alt="${countryCode}" />
+          <img src="https://flagcdn.com/w40/${countryCode.toLowerCase()}.png" alt="${countryCode}" />
         </div>
         <div class="marker-point"></div>
       </div>
@@ -74,7 +63,7 @@ const createCustomIcon = (countryCode?: string) => {
 };
 
 const LeafletMap: React.FC<LeafletMapProps> = ({
-  center = [28.6139, 77.209], // Default: Delhi
+  center = [28.6139, 77.209],
   markers = [],
   zoom = 5,
   mapKey = 1,
@@ -84,17 +73,10 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
   const [mapCenter, setMapCenter] = useState<LatLngExpression>(center);
   const [mapZoom, setMapZoom] = useState<number>(zoom);
 
-  useEffect(() => {
-    setMapCenter(center);
-  }, [center]);
+  useEffect(() => setMapCenter(center), [center]);
+  useEffect(() => setMapZoom(zoom), [zoom]);
 
-  useEffect(() => {
-    setMapZoom(zoom);
-  }, [zoom]);
-
-  const handleMapClick = (e: LeafletMouseEvent) => {
-    onMapClick?.(e.latlng);
-  };
+  const handleMapClick = (e: LeafletMouseEvent) => onMapClick?.(e.latlng);
 
   return (
     <MapContainer
@@ -104,13 +86,11 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
       className="leaflet-map-container"
       key={mapKey}
       zoomControl={showControls}
-      whenCreated={(map) => {
-        map.on("click", handleMapClick);
-      }}
+      whenReady={(map) => map.target.on("click", handleMapClick)}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       />
 
       <FlyTo position={mapCenter} zoom={mapZoom} />
